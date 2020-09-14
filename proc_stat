@@ -1,0 +1,1 @@
+ mpstat -P ALL 3 | egrep -v " 99| 100| 98| 97| 96| 95| 94|all"
