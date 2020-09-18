@@ -1,0 +1,29 @@
+rw: (g=0): rw=rw, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=libaio, iodepth=128
+fio-3.10
+Starting 1 process
+
+rw: (groupid=0, jobs=1): err= 0: pid=32151: Fri Sep 18 15:41:47 2020
+   read: IOPS=24.5k, BW=1532MiB/s (1606MB/s)(44.9GiB/30036msec)
+    slat (usec): min=3, max=132, avg=14.19, stdev= 2.67
+    clat (usec): min=472, max=494726, avg=5211.67, stdev=12753.52
+     lat (usec): min=488, max=494739, avg=5226.16, stdev=12753.55
+    clat percentiles (usec):
+     |  1.00th=[   611],  5.00th=[   709], 10.00th=[   758], 20.00th=[   840],
+     | 30.00th=[   906], 40.00th=[   988], 50.00th=[  1106], 60.00th=[  1287],
+     | 70.00th=[  1647], 80.00th=[  3392], 90.00th=[ 14746], 95.00th=[ 31327],
+     | 99.00th=[ 54789], 99.50th=[ 61604], 99.90th=[ 76022], 99.95th=[ 83362],
+     | 99.99th=[476054]
+   bw (  MiB/s): min=  212, max= 1775, per=100.00%, avg=1533.07, stdev=204.28, samples=60
+   iops        : min= 3406, max=28406, avg=24529.07, stdev=3268.44, samples=60
+  lat (usec)   : 500=0.01%, 750=8.76%, 1000=32.39%
+  lat (msec)   : 2=33.69%, 4=6.11%, 10=6.18%, 20=4.82%, 50=6.52%
+  lat (msec)   : 100=1.50%, 250=0.02%, 500=0.02%
+  cpu          : usr=3.19%, sys=39.40%, ctx=172637, majf=0, minf=23
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=105.2%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=736018,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=1532MiB/s (1606MB/s), 1532MiB/s-1532MiB/s (1606MB/s-1606MB/s), io=44.9GiB (48.2GB), run=30036-30036msec
