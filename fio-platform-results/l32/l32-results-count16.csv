@@ -1,0 +1,61 @@
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect1-vm1-4Write-1files-iodpeth128-jobcount16-try1:  write: IOPS=42.4k, BW= 166 MiB/s (174MB/s)(12.4GiB/76300msec)
+########
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect1-vm1-64Write-1files-iodpeth128-jobcount16-try1:  write: IOPS=14.0k, BW= 936 MiB/s (981MB/s)(547 MiB/584msec)
+########
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect1-vm1-128Write-1files-iodpeth128-jobcount16-try1:  write: IOPS=9605, BW= 1201 MiB/s (1259MB/s)(969 MiB/807msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect4-vm1-128Write-1files-iodpeth8-jobcount16-try1:  write: IOPS=10.8k, BW= 1348 MiB/s (1413MB/s)(664 MiB/493msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect2-vm1-128Write-1files-iodpeth8-jobcount16-try1:  write: IOPS=11.3k, BW= 1415 MiB/s (1484MB/s)(401GiB/290273msec)
+########
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect2-vm1-256Write-1files-iodpeth8-jobcount16-try1:  write: IOPS=5299, BW= 1325 MiB/s (1389MB/s)(1242 MiB/937msec)
+########
+########
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq1-nconnect8-vm1-4Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=108k, BW= 422 MiB/s (443MB/s)(12.4GiB/30004msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-4Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=109k, BW= 427 MiB/s (447MB/s)(12.5GiB/30003msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq1-nconnect16-vm1-4Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=113k, BW= 441 MiB/s (463MB/s)(12.9GiB/30003msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-4Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=118k, BW= 462 MiB/s (484MB/s)(13.5GiB/30003msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect8-vm1-4Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=119k, BW= 463 MiB/s (485MB/s)(13.6GiB/30002msec)
+########
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-64Read-1files-iodpeth2-jobcount16-try1:   read: IOPS=37.8k, BW= 2362 MiB/s (2477MB/s)(69.2GiB/30001msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect8-vm1-64Read-1files-iodpeth4-jobcount16-try1:   read: IOPS=38.2k, BW= 2390 MiB/s (2506MB/s)(70.0GiB/30004msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect8-vm1-64Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=38.7k, BW= 2420 MiB/s (2538MB/s)(70.9GiB/30004msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-64Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=44.4k, BW= 2773 MiB/s (2908MB/s)(81.3GiB/30006msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-64Read-1files-iodpeth4-jobcount16-try1:   read: IOPS=47.5k, BW= 2966 MiB/s (3110MB/s)(86.9GiB/30003msec)
+########
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq0-nconnect16-vm1-128Read-1files-iodpeth2-jobcount16-try1:   read: IOPS=22.5k, BW= 2814 MiB/s (2951MB/s)(82.4GiB/30002msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq0-nconnect16-vm1-128Read-1files-iodpeth4-jobcount16-try1:   read: IOPS=22.9k, BW= 2865 MiB/s (3004MB/s)(84.0GiB/30028msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-128Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=23.8k, BW= 2976 MiB/s (3121MB/s)(88.7GiB/30521msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-128Read-1files-iodpeth4-jobcount16-try1:   read: IOPS=24.0k, BW= 3125 MiB/s (3276MB/s)(91.7GiB/30039msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-128Read-1files-iodpeth2-jobcount16-try1:   read: IOPS=25.8k, BW= 3222 MiB/s (3379MB/s)(94.4GiB/30007msec)
+########
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-256Read-1files-iodpeth2-jobcount16-try1:   read: IOPS=11.2k, BW= 2806 MiB/s (2942MB/s)(82.2GiB/30006msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-256Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=11.2k, BW= 2807 MiB/s (2943MB/s)(82.3GiB/30028msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-256Read-1files-iodpeth1-jobcount16-try1:   read: IOPS=11.2k, BW= 2809 MiB/s (2946MB/s)(82.3GiB/30003msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-256Read-1files-iodpeth4-jobcount16-try1:   read: IOPS=11.4k, BW= 2855 MiB/s (2994MB/s)(83.7GiB/30016msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-256Read-1files-iodpeth2-jobcount16-try1:   read: IOPS=12.1k, BW= 3033 MiB/s (3181MB/s)(88.9GiB/30007msec)
+########
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect16-vm1-512Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=4600, BW= 2302 MiB/s (2414MB/s)(68.5GiB/30490msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-512Read-1files-iodpeth2-jobcount16-try1:   read: IOPS=5383, BW= 2692 MiB/s (2823MB/s)(78.9GiB/30011msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-512Read-1files-iodpeth1-jobcount16-try1:   read: IOPS=5421, BW= 2711 MiB/s (2842MB/s)(79.4GiB/30009msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-512Read-1files-iodpeth8-jobcount16-try1:   read: IOPS=5567, BW= 2785 MiB/s (2921MB/s)(81.7GiB/30037msec)
+/nfsv3/poc/fio-platform-results/l32/l32v2-irq2-nconnect12-vm1-512Read-1files-iodpeth4-jobcount16-try1:   read: IOPS=5705, BW= 2854 MiB/s (2992MB/s)(83.7GiB/30021msec)
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
+########
