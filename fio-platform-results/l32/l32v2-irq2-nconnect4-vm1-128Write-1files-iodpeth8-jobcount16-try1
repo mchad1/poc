@@ -1,0 +1,24 @@
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 2
+
+rw: (groupid=0, jobs=16): err= 0: pid=6378: Sat Sep 19 12:12:23 2020
+  write: IOPS=10.8k, BW=1348MiB/s (1413MB/s)(664MiB/493msec)
+    clat percentiles (nsec):
+     |  1.00th=[    0],  5.00th=[    0], 10.00th=[    0], 20.00th=[    0],
+     | 30.00th=[    0], 40.00th=[    0], 50.00th=[    0], 60.00th=[    0],
+     | 70.00th=[    0], 80.00th=[    0], 90.00th=[    0], 95.00th=[    0],
+     | 99.00th=[    0], 99.50th=[    0], 99.90th=[    0], 99.95th=[    0],
+     | 99.99th=[    0]
+  cpu          : usr=0.37%, sys=1.97%, ctx=5247, majf=0, minf=128
+  IO depths    : 1=0.3%, 2=0.6%, 4=1.2%, 8=97.9%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.7%, 8=0.3%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,5315,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+  WRITE: bw=1348MiB/s (1413MB/s), 1348MiB/s-1348MiB/s (1413MB/s-1413MB/s), io=664MiB (697MB), run=493-493msec

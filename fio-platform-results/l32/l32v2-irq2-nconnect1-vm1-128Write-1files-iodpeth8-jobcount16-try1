@@ -1,0 +1,96 @@
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15
+rw: (g=0): rw=rw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+...
+fio-3.10
+Starting 16 processes
+
+fio: terminating on signal 15

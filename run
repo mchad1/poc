@@ -1,16 +1,29 @@
 #!/bin/ksh
-for connect in 1 2 4 8 16; do
+mkdir -p /nfsv3/files/$1
+for connect in 1 2 4 8 12 16; do
     umount /nfsv3
     mount 10.0.1.4:/nfsv31 /nfsv3 -o rsize=262144,wsize=262144,nconnect=$connect
+    echo "CRAP" 
+    mount | grep 2049
     for queue in 0 1 2 3 ; do
-        ./set_irq_affinity_bynode.sh  $queue eth1;  for work in 0 100; do
+        #./set_irq_affinity_bynode.sh  $queue eth1;  for work in 0 100; do
+        ./set_irq_affinity_bynode.sh  $queue eth1;  for work in 100; do
              if [[ $work == 0 ]]; then
                 direction=Write
              else
                 direction=Read
              fi;
-             taskset -c 31 fio /nfsv3/poc/fio.ini --rwmixread=$work --iodepth=80 --nrfiles=$1 -o /nfsv3/poc/fio-platform-results/l32v2-irq${queue}-nconnect${connect}-vm1-4k${direction}-${1}files-iodpeth80;
-             taskset -c 31 fio /nfsv3/poc/fio.ini --rwmixread=$work --iodepth=120 --nrfiles=$1 -o /nfsv3/poc/fio-platform-results/l32v2-irq${queue}-nconnect${connect}-vm1-4k${direction}-${1}files-iodpeth120;
+             mkdir /nfsv3/poc/fio-platform-results/l32
+             for try in 1 ; do
+                 #for iodepth in 128 96 48 24 16 8 4 2 1; do                
+                 for iodepth in  8 4 2 1; do                
+                     #for bs in 4 64 128 256 512; do
+                     for bs in 512 256 128 64 4 ; do
+                 #        taskset -c 31 fio /nfsv3/poc/fio.ini --rwmixread=$work --iodepth=${iodepth} --nrfiles=$1 --bs=${bs}K --directory=/nfsv3/files/$1 -o /nfsv3/poc/fio-platform-results/l32/l32v2-irq${queue}-nconnect${connect}-vm1-${bs}${direction}-${1}files-iodpeth${iodepth}-jobcount16-try${try};
+                         fio /nfsv3/poc/fio.ini --rwmixread=$work --iodepth=${iodepth} --nrfiles=$1 --bs=${bs}K --directory=/nfsv3/files/$1 -o /nfsv3/poc/fio-platform-results/l32/l32v2-irq${queue}-nconnect${connect}-vm1-${bs}${direction}-${1}files-iodpeth${iodepth}-jobcount16-try${try};
+                 done
+             done
          done;
      done
+done
 done
