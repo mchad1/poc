@@ -1,0 +1,229 @@
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+  48.38	   0.00
+read:            ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.031	  6.444	209.876       0 (0.0%)	  5.190	  5.238
+write:           ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  5.915	 18.514	  3.130       0 (0.0%)	  4.707	  4.732
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 155.00	   0.00
+read:            ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+write:           ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 19.000	 38.277	  2.015       0 (0.0%)	  5.105	  5.105
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 175.00	   0.00
+read:            ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+write:           ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 22.000	 43.598	  1.982       0 (0.0%)	  4.000	  4.000
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 169.00	   0.00
+read:            ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+write:           ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 22.000	 44.750	  2.034       0 (0.0%)	  5.045	  5.091
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 162.00	   0.00
+read:            ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+write:           ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 21.000	 43.766	  2.084       0 (0.0%)	  5.190	  5.238
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 168.00	   0.00
+read:            ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+write:           ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 21.000	 42.520	  2.025       0 (0.0%)	  4.190	  4.190
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 169.00	   0.00
+read:            ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+write:           ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 22.000	 46.023	  2.092       0 (0.0%)	  4.409	  4.455
+Caught ^C... exiting
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+  59.26	   0.00
+getattr:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 14.632	  6.458	  0.441       0 (0.0%)	  2.167	  2.206
+access:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 14.698	  5.569	  0.379       0 (0.0%)	  2.759	  2.795
+
+10990 inode revalidations, hitting in cache -0.12% of the time
+12 open operations (mandatory GETATTR requests)
+0.15% of GETATTRs resulted in data cache invalidations
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 171.00	   0.00
+getattr:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 42.000	 18.539	  0.441       0 (0.0%)	  2.095	  2.143
+access:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 43.000	 16.293	  0.379       0 (0.0%)	  2.721	  2.767
+
+42 inode revalidations, hitting in cache 0.00% of the time
+0 open operations (mandatory GETATTR requests)
+0.00% of GETATTRs resulted in data cache invalidations
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 160.00	   0.00
+getattr:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 40.000	 17.656	  0.441       0 (0.0%)	  2.100	  2.175
+access:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 40.000	 15.156	  0.379       0 (0.0%)	  2.725	  2.775
+
+40 inode revalidations, hitting in cache 0.00% of the time
+0 open operations (mandatory GETATTR requests)
+0.00% of GETATTRs resulted in data cache invalidations
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 180.00	   0.00
+getattr:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 45.000	 19.863	  0.441       0 (0.0%)	  2.111	  2.133
+access:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 44.000	 16.672	  0.379       0 (0.0%)	  2.682	  2.705
+
+45 inode revalidations, hitting in cache 0.00% of the time
+0 open operations (mandatory GETATTR requests)
+0.00% of GETATTRs resulted in data cache invalidations
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 160.00	   0.00
+getattr:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 40.000	 17.656	  0.441       0 (0.0%)	  2.075	  2.125
+access:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 40.000	 15.156	  0.379       0 (0.0%)	  2.675	  2.700
+
+40 inode revalidations, hitting in cache 0.00% of the time
+0 open operations (mandatory GETATTR requests)
+0.00% of GETATTRs resulted in data cache invalidations
+Caught ^C... exiting
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+  60.61	   0.00
+lookup:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  7.953	  2.923	  0.368       0 (0.0%)	  0.940	  0.972
+readdir:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.009	  0.006	  0.626       0 (0.0%)	  2.143	  2.143
+
+12 open operations (pathname lookups)
+29598 dentry revalidates and 5974 vfs lookup requests
+resulted in 6052 LOOKUPs on the wire
+24 vfs getdents calls resulted in 7 READDIRs on the wire
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 171.00	   0.00
+lookup:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 22.000	  8.016	  0.364       0 (0.0%)	  0.909	  0.955
+readdir:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+
+0 open operations (pathname lookups)
+65 dentry revalidates and 22 vfs lookup requests
+resulted in 22 LOOKUPs on the wire
+0 vfs getdents calls resulted in 0 READDIRs on the wire
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 161.00	   0.00
+lookup:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 20.000	  7.266	  0.363       0 (0.0%)	  0.950	  0.950
+readdir:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+
+0 open operations (pathname lookups)
+60 dentry revalidates and 20 vfs lookup requests
+resulted in 20 LOOKUPs on the wire
+0 vfs getdents calls resulted in 0 READDIRs on the wire
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 178.00	   0.00
+lookup:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 22.000	  7.992	  0.363       0 (0.0%)	  0.864	  0.909
+readdir:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+
+0 open operations (pathname lookups)
+66 dentry revalidates and 22 vfs lookup requests
+resulted in 22 LOOKUPs on the wire
+0 vfs getdents calls resulted in 0 READDIRs on the wire
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 156.00	   0.00
+lookup:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 19.000	  6.902	  0.363       0 (0.0%)	  0.895	  0.947
+readdir:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+
+0 open operations (pathname lookups)
+58 dentry revalidates and 19 vfs lookup requests
+resulted in 19 LOOKUPs on the wire
+0 vfs getdents calls resulted in 0 READDIRs on the wire
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 175.00	   0.00
+lookup:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 22.000	  8.016	  0.364       0 (0.0%)	  0.909	  0.909
+readdir:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+
+0 open operations (pathname lookups)
+66 dentry revalidates and 22 vfs lookup requests
+resulted in 22 LOOKUPs on the wire
+0 vfs getdents calls resulted in 0 READDIRs on the wire
+
+mchadnfs.file.core.windows.net:/mchadnfs/afnfs mounted on /nfsv41:
+
+   op/s		rpc bklog
+ 160.00	   0.00
+lookup:          ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		 20.000	  7.273	  0.364       0 (0.0%)	  0.900	  0.900
+readdir:         ops/s		   kB/s		  kB/op		retrans		avg RTT (ms)	avg exe (ms)
+		  0.000	  0.000	  0.000       0 (0.0%)	  0.000	  0.000
+
+0 open operations (pathname lookups)
+59 dentry revalidates and 20 vfs lookup requests
+resulted in 20 LOOKUPs on the wire
+0 vfs getdents calls resulted in 0 READDIRs on the wire
+Caught ^C... exiting
