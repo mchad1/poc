@@ -1,6 +1,6 @@
 !/usr/bin/ksh
 
-mountpoint="repro"
+mountpoint="$1"
 
 while true; do
     grep -A 20 $mountpoint /proc/self/mountstats | grep "xprt:"  | awk '{print $9,$11,$12,$8}' | tail -1 | while read i; do
