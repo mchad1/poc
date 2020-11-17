@@ -109,7 +109,7 @@ file_path=$1
 # 8GiB
 target_file_size=8589934592
 # 64 MiB
-dd_block_size=$(( 1048576 * 64 ))
+dd_block_size=$(( 131072 * 512 ))
 dd_count=$(( ${target_file_size} / ${dd_block_size} ))
 
 # Create a file or use existing if big enough
@@ -119,7 +119,7 @@ if [ 1 -eq "$(echo "${file_size} >= ${target_file_size}" | bc -l)" ]; then
 	echo "Using existing file"
 else
 	echo -n "Creating 8GiB file ${file_path}..."
-	dd if=/dev/urandom of="${file_path}" iflag=fullblock bs=${dd_block_size} count=${dd_count} >/dev/null 2>&1
+	dd if=/dev/zero of="${file_path}" iflag=fullblock bs=${dd_block_size} count=${dd_count} >/dev/null 2>&1
 	echo "done"
 	# Clear slab + pagecache
 	echo 3 > /proc/sys/vm/drop_caches
