@@ -136,7 +136,7 @@ fi
 #	fi
 #done
 local_ip=`ss -n | grep 2049 | awk '{print $5}' | cut -d: -f1 | sort | uniq`
-local_nic=`ip a | grep $local_ip | awk '{print $7}'`
+local_nic=`ip a | grep -B 2 $local_ip | grep mtu | awk -F: '{print $2}' | awk '{print $1}'`
 interface=`ip a | grep SLAVE | grep $local_nic | awk -F: '{print $2}' | awk '{print $1}'`
 
 if [ -z ${interface} ];
@@ -149,13 +149,31 @@ echo "Found mellanox interface: ${interface}"
 # estimate number of cpus per numa node
 #cpus_per_node=$(( $(lscpu | grep "NUMA node0" | sed -r 's/^.*([0-9]+)$/\1/g') + 1))
 cpus_per_node=$(( $(lscpu | grep "NUMA node0" | cut -d- -f2 )))
-rxtx_queue=`ethtool -l eth3 | grep -i com | head -1 | awk '{print $2}'`
-if [ $rxtx_queue -eq 0 ]; then
-    echo "Set number of rx, tx queues to $cpus_per_node"
-    ethtool -L "${interface}" rx ${cpus_per_node} tx ${cpus_per_node}
+rxtx_queue_combined=`ethtool -l $interface | grep -i com | head -1 | awk '{print $2}'`
+rxtx_queue_RX=`ethtool -l $interface | grep -i RX | head -1 | awk '{print $2}'`
+rxtx_queue_TX=`ethtool -l $interface | grep -i TX | head -1 | awk '{print $2}'`
+if [ $rxtx_queue_combined -eq 0 ]; then
+    #Find the largest queue count based on tx and rx queue size
+    if [ $rxtx_queue_RX -gt $rxtx_queue_TX ]; then
+        tune=$rxtx_queue_RX
+    else
+        tune=$rxtx_queue_WX
+    fi
+    #Set max tx and rx queues to cpu_count per numa node or hardware max, which ever is smaller
+    if [ $cpus_per_node -gt $tune ]; then
+        tune=$cpus_per_node
+    fi
+    echo "Set number of rx, tx queues to $tune"
+    ethtool -L "${interface}" rx ${tune} tx ${tune}
 else
-    echo "Set number of combined queues to $cpus_per_node"
-    ethtool -L "${interface}" combined ${cpus_per_node}
+    #Set max combined queues to cpu_count per numa node or hardware max, which ever is smaller
+    if [ $cpus_per_node -gt $rxtx_queue_combined ]; then
+        tune=$rxtx_queue_combined
+    else
+        tune=$cpus_per_node
+    fi
+    echo "Set number of combined queues to $tune"
+    ethtool -L "${interface}" combined ${tune}
 fi
 
 # Get list of numa nodes
@@ -184,6 +202,8 @@ do
 	for i in $(seq ${num_runs});
 	do
 		dd_out=$(taskset -c ${a_cpu} dd if=${file_path} of=/dev/null iflag=direct bs=${dd_block_size} count=${dd_count} 2>&1)
+		#dd_out=$(taskset -c ${a_cpu} dd if=/dev/zero of=${file_path} bs=${dd_block_size} count=${dd_count} 2>&1)
+                echo $dd_out 
 
 		if [ "$(echo $?)" != "0" ]; then
 			echo "Error - reading from ${file_path}"
