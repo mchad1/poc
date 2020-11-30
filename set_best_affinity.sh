@@ -94,6 +94,7 @@ function set_irq_affinity_by_node
 	done
 }
 
+echo $1
 if [ -z $1 ]; then
 	echo "usage: $0 <FILE>"
 	echo "This script will:"
@@ -126,14 +127,18 @@ else
 fi
 
 # Find mellanox device interface
-sys_class_net_path="/sys/class/net"
-for i in $(ls ${sys_class_net_path});
-do
-	if $(readlink "${sys_class_net_path}/${i}/device/driver" | grep -q mlx); then
-		interface=$i
-		break
-	fi
-done
+#sys_class_net_path="/sys/class/net"
+#for i in $(ls ${sys_class_net_path});
+#do
+#	if $(readlink "${sys_class_net_path}/${i}/device/driver" | grep -q mlx); then
+#		interface=$i
+#		break
+#	fi
+#done
+local_ip=`ss -n | grep 2049 | awk '{print $5}' | cut -d: -f1 | sort | uniq`
+local_nic=`ip a | grep $local_ip | awk '{print $7}'`
+interface=`ip a | grep SLAVE | grep $local_nic | awk -F: '{print $2}' | awk '{print $1}'`
+
 if [ -z ${interface} ];
 then
 	echo "Couldn't find mellanox interface"
@@ -142,16 +147,22 @@ fi
 echo "Found mellanox interface: ${interface}"
 
 # estimate number of cpus per numa node
-cpus_per_node=$(( $(lscpu | grep "NUMA node0" | sed -r 's/^.*([0-9]+)$/\1/g') + 1))
-echo "Set number of rx, tx queues to $cpus_per_node"
-ethtool -L "${interface}" rx ${cpus_per_node} tx ${cpus_per_node}
+#cpus_per_node=$(( $(lscpu | grep "NUMA node0" | sed -r 's/^.*([0-9]+)$/\1/g') + 1))
+cpus_per_node=$(( $(lscpu | grep "NUMA node0" | cut -d- -f2 )))
+rxtx_queue=`ethtool -l eth3 | grep -i com | head -1 | awk '{print $2}'`
+if [ $rxtx_queue -eq 0 ]; then
+    echo "Set number of rx, tx queues to $cpus_per_node"
+    ethtool -L "${interface}" rx ${cpus_per_node} tx ${cpus_per_node}
+else
+    echo "Set number of combined queues to $cpus_per_node"
+    ethtool -L "${interface}" combined ${cpus_per_node}
+fi
 
 # Get list of numa nodes
 numa_nodes="$(ls /sys/devices/system/node | grep 'node' | sed 's#node##')"
 
 best_node="$(echo "${numa_nodes}" | head -1)"
 best_speed="0.00"
-
 num_runs="5"
 
 for n in ${numa_nodes};
