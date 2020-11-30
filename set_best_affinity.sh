@@ -109,7 +109,7 @@ file_path=$1
 # 8GiB
 target_file_size=8589934592
 # 64 MiB
-dd_block_size=$(( 131072 * 512 ))
+dd_block_size=$(( 1048576 * 64 ))
 dd_count=$(( ${target_file_size} / ${dd_block_size} ))
 
 # Create a file or use existing if big enough
@@ -119,7 +119,7 @@ if [ 1 -eq "$(echo "${file_size} >= ${target_file_size}" | bc -l)" ]; then
 	echo "Using existing file"
 else
 	echo -n "Creating 8GiB file ${file_path}..."
-	dd if=/dev/zero of="${file_path}" iflag=fullblock bs=${dd_block_size} count=${dd_count} >/dev/null 2>&1
+	dd if=/dev/urandom of="${file_path}" iflag=fullblock bs=${dd_block_size} count=${dd_count} >/dev/null 2>&1
 	echo "done"
 	# Clear slab + pagecache
 	echo 3 > /proc/sys/vm/drop_caches
@@ -141,8 +141,10 @@ then
 fi
 echo "Found mellanox interface: ${interface}"
 
-echo "Set number of rx, tx queues to 8"
-ethtool -L "${interface}" rx 8 tx 8
+# estimate number of cpus per numa node
+cpus_per_node=$(( $(lscpu | grep "NUMA node0" | sed -r 's/^.*([0-9]+)$/\1/g') + 1))
+echo "Set number of rx, tx queues to $cpus_per_node"
+ethtool -L "${interface}" rx ${cpus_per_node} tx ${cpus_per_node}
 
 # Get list of numa nodes
 numa_nodes="$(ls /sys/devices/system/node | grep 'node' | sed 's#node##')"
