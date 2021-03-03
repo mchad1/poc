@@ -1,4 +1,6 @@
 #/etc/udev/rules.d/99-nfs.rules
-#Once the file is in place, reload udevadm with the command  
+#Once the file is in place, reload udevadm with the command to pick up the udev rul
 #udevadm control --reload
-SUBSYSTEM=="bdi", ACTION=="add", PROGRAM="/bin/awk -v bdi=$kernel 'BEGIN{ret=1} {if ($4 == bdi) {ret=0}} END{exit ret}' /proc/fs/nfsfs/volumes", ATTR{read_ahead_kb}="3840"
+#Note, the change is not dynamic, only filesystems mounted after the udevrule is applied will pick up the new readahead value.
+##In other words, unmount and remount the nfs filesystems to pick up the change
+SUBSYSTEM=="bdi", ACTION=="add", PROGRAM="/bin/awk -v bdi=$kernel 'BEGIN{ret=1} {if ($4 == bdi) {ret=0}} END{exit ret}' /proc/fs/nfsfs/volumes", ATTR{read_ahead_kb}="15380"
