@@ -1,0 +1,24 @@
+This is the m128 info for (presently in the form of D32) the testing shown in m128 and m128-post-redeployment
+MCHAD-SOUTHCENTRAL.RG     Status  :   Stopped (deallocated)
+Location : South Central US
+Operating system: 
+Private IP address: 10.0.0.16
+OS disk: mchad-msereis_OsDisk_1_e23326d835ae4072aa85ec5d320c37f2
+
+This is the information for the latter m128 tests
+Resource group: mchad-southcentral.rg
+Status: Running
+Location: South Central US
+Operating system: Windows (Windows Server 2016 Datacenter)
+Size: Standard M128 (128 vcpus, 2048 GiB memory)
+Virtual network/subnet: mchad-southcentral.vn/compute
+Computer name: mchad-m128
+Operating system: Windows (Windows Server 2016 Datacenter)
+Publisher: MicrosoftWindowsServer
+Offer: WindowsServer
+Plan: 2016-Datacenter
+VM generation: V1
+Size: Standard M128
+vCPUs: 128
+RAM: 2048 GiB
+OS disk: mchad-m128_OsDisk_1_a16a03d312b442968a94813a740de6c4
