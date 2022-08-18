@@ -1,9 +1,0 @@
-rw: (g=0): rw=rw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=1
-fio-3.10
-Starting 1 process
-rw: Laying out IO files (990 files / total 1038090MiB)
-
-fio: terminating on signal 15
-
-
-Run status group 0 (all jobs):
